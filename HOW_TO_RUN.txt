@@ -1,0 +1,51 @@
+HOW TO RUN SecureAPI
+====================
+
+METHOD 1 (Recommended)
+----------------------
+1. Make sure Python is installed
+2. Double-click  run.bat
+
+METHOD 2 (If run.bat still closes)
+---------------------------------
+1. Double-click  run_simple.bat
+
+
+METHOD 3 (Manual - 100% works)
+------------------------------
+1. Open Command Prompt (search "cmd" in Windows)
+2. Type these commands one by one:
+
+   cd path	o\SecureAPI
+   (example: cd Desktop\SecureAPI)
+
+   python -m pip install -r requirements.txt
+
+   python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+
+3. Open browser: http://127.0.0.1:8000/docs
+
+
+IF YOU SEE "Python is not recognized"
+-------------------------------------
+Python is not installed or not added to PATH.
+
+1. Go to: https://www.python.org/downloads/
+2. Download Python 3.11 or 3.12
+3. Run the installer
+4. VERY IMPORTANT: Check the box that says
+     "Add python.exe to PATH"
+5. Click "Install Now"
+6. After install, RESTART your computer
+7. Try again
+
+
+DEMO ACCOUNTS
+-------------
+admin / admin123
+alice / alice123
+bob   / bob123
+
+
+After server starts, open:
+http://127.0.0.1:8000/docs
